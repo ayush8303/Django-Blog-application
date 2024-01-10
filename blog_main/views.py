@@ -49,7 +49,7 @@ def login(request):
       if user is not None:
         auth.login(request,user)
       
-      return redirect('home')
+      return redirect('dashboard')
   form = AuthenticationForm()
   context = {
     'form':form,
@@ -60,3 +60,5 @@ def login(request):
 def logout(request):
   auth.logout(request)
   return redirect('home')
+
+
